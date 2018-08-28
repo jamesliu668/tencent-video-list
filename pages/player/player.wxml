@@ -1,17 +1,11 @@
 <!--pages/Video/index.wxml-->
-<!--1px = 750/320 = 2.34rpx;-->
-<view >
-    <view class="goods-container">
-       <!-- <view id="myVideo" class="goods-box" wx:for-items="{{videos}}" wx:key="{{index}}" data-id="{{item.id}}"> -->
-          <view class="goods-title">{{video.title}}</view>
-           <txv-video class="goods-video"  vid="{{video.vid}}" playerid="txv{{video.id}}"  autoplay="{{false}}"></txv-video>
-           <view class="goods-title">{{video.description}}</view>
-           <!-- <image bindtap="scanQRCode" class="img" src="/style/img/pay.jpeg"></image> -->
-        <!-- </view> -->
-    </view>
-</view>
+  <view class="video-container">
+        <view class="video-title">{{video.title}}</view>
+          <txv-video class="video-video"  vid="{{video.vid}}" playerid="txv{{video.id}}"  autoplay="{{false}}"></txv-video>
+          <view class="video-desc">{{video.description}}</view>
+  </view>
 
   <view class="usermotto">
-    <button class="contact-btn" bindtap="scanQRCode">打赏</button>
-    <button class="contact-btn" open-type="contact">联系我们</button>
+    <button class="pay-btn" bindtap="scanQRCode">打赏</button>
+    <button class="contact-btn" open-type="contact">咨询</button>
   </view>

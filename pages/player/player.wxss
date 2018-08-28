@@ -1,1 +1,37 @@
 /* pages/player/player.wxss */
+page {
+  height: 100%;
+}
+
+.video-container {
+  padding: 10px;
+  margin-bottom:20px;
+  height: 70%;
+}
+
+.video-desc {
+  font-size:26rpx;
+  color:#2f2f2f;
+  height:40%;
+  padding:10px 0;
+  overflow-y:scroll;
+}
+
+.pay-btn {
+  width:30%;
+  background-color:#ff6c39;
+  font-size:19px;
+  color:#ffffff;
+}
+
+.contact-btn {
+  width:30%;
+  font-size:14px;
+  color:#ff8968;
+  margin-top:10px;
+}
+
+.usermotto {
+  height:30%;
+  padding:20px 0 0 0;
+}
