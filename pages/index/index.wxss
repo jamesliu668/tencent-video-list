@@ -62,14 +62,7 @@
     -webkit-line-clamp:3;
     height: 115rpx;
 }
-.list-box-title::after{
-    content:"...";
-    position:absolute;
-    bottom:0;
-    right:0;
-    padding: 0 5px;
-    background-color: #fff;
-}
+
 .list-box-description {
   font-size: 26rpx;
   line-height: 15rpx;
