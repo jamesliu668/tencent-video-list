@@ -1,4 +1,5 @@
-// pages/player/player.js
+const txvContext = requirePlugin("tencentvideo");
+
 Page({
 
   /**
@@ -21,6 +22,8 @@ Page({
    */
   onLoad: function (options) {
     var that = this;
+    that.txvContext = txvContext.getTxvContext('tencentPlayer');
+    // get parameters from url
     // console.log(options.id);
     // console.log(options.title);
     // console.log(options.vid);
@@ -29,7 +32,6 @@ Page({
     //   title: options.title,
     //   vid: options.vid
     // }})
-
     wx.getStorage({
       key: 'video',
       success: function(res) {
@@ -93,5 +95,13 @@ Page({
       // current:current,
       urls: this.data.imageList // 需要预览的图片http链接列表
     })
+  },
+
+  playerError: function(e) {
+    console.log(e);
+  },
+
+  playerStateChange: function(e) {
+    console.log(e);
   }
 })

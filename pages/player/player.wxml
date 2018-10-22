@@ -1,7 +1,7 @@
 <!--pages/Video/index.wxml-->
   <view class="video-container">
         <view class="video-title">{{video.title}}</view>
-          <txv-video class="video-video"  vid="{{video.vid}}" playerid="txv{{video.id}}"  autoplay="{{false}}"></txv-video>
+          <txv-video class="video-video" vid="{{video.vid}}" playerid="tencentPlayer"  autoplay="{{false}}" showCenterPlayBtn="{{true}}" binderror="playerError" bindstatechange="playerStateChange"></txv-video>
           <view class="video-desc">{{video.description}}</view>
   </view>
 
