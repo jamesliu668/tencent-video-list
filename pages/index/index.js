@@ -1,7 +1,7 @@
 const util = require('../../utils/utils.js');
 
 var refresh = false; // 是否在刷新
-var url = "http://jmsliu.cn/wp-admin/admin-ajax.php";
+var url = "https://jmsliu.cn/wp-admin/admin-ajax.php";
 var page=0;
 var nomore=false;
 Page({
