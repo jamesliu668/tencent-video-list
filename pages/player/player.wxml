@@ -8,4 +8,5 @@
   <view class="usermotto">
     <button class="pay-btn" bindtap="scanQRCode">打赏</button>
     <button class="contact-btn" open-type="contact">咨询</button>
+    <view class="version">v 1.0.2</view>
   </view>

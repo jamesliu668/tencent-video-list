@@ -98,10 +98,29 @@ Page({
   },
 
   playerError: function(e) {
+    var that = this;
     console.log(e);
+    wx.reportAnalytics('video_play_failed', {
+      videoname: that.data.video.title,
+      vid: that.data.video.vid,
+      videostate: e.detail.message
+    });
   },
 
   playerStateChange: function(e) {
+    var that = this;
     console.log(e);
+    if(e.detail.newstate=="error") {
+      wx.reportAnalytics('video_play_failed', {
+        videoname: that.data.video.title,
+        vid: that.data.video.vid,
+        videostate: "statechange: error"
+      });
+    }
+    
+    if(e.detail.newstate == "playing" && that.isGetError) {
+      //that.txvContext.play();
+      //出错了，暂时不知道怎么恢复
+    }
   }
 })
